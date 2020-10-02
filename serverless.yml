@@ -5,5 +5,13 @@ provider:
   runtime: python3.8
 
 functions:
-  hello:
-    handler: handler.hello
+  list_instances:
+    handler: handler.list_instances
+    events:
+      - http:
+          path: instances
+          method: get
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
