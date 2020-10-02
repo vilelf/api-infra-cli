@@ -3,10 +3,12 @@ import json
 
 
 def make_response(body, status_code, headers={}):
+    default_headers = {'Content-Type': 'application/json'}
+    default_headers.update(headers)
     response = {
         'body': json.dumps(body, default=datetime_handler),
-        'status_code': status_code,
-        'headers': headers
+        'statusCode': status_code,
+        'headers': default_headers
     }
     return response
 
