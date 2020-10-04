@@ -1,4 +1,4 @@
-from processor import Processor
+from src.processor import Processor
 from utils import make_response
 
 def list_instances(event, context):
