@@ -1,4 +1,4 @@
-from processor import Processor
+from src.processor import Processor
 from unittest import mock
 
 @mock.patch('boto3.client')
