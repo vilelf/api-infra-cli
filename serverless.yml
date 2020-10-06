@@ -11,7 +11,7 @@ provider:
 
 functions:
   list_instances:
-    handler: handler.list_instances
+    handler: src.handler.list_instances
     events:
       - http:
           path: instances
